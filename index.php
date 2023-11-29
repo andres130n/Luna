@@ -1,93 +1,99 @@
-<!doctype html>
-<?php session_start(); ?>
-<html class="no-js" lang="en" dir="ltr">
-  <head>
-    <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Bienvenido a su portal Laboratorio B & T.</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Gestión de Examens :: Kerlilab</title>
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
-    <link href='https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-  </head>
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
 
-  <body>
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
 
-    <br>
+    <!-- Theme Config Js -->
+    <script src="js/config.js"></script>
 
-    <div class="row">
+    <!-- App css -->
+    <link href="css/app-saas.min.css" rel="stylesheet" type="text/css" id="app-style" />
 
-      <?php include "php/navbar.php"; ?>
+    <!-- Icons css -->
+    <link href="css/icons.min.css" rel="stylesheet" type="text/css" />
+</head>
 
-    <div class="grid-container">
-      <div class="grid-x grid-padding-x">
-        <div class="large-12 cell">
-          <h3>Bienvenido a su portal Laboratorio B & T.</h3>
-        </div>
-      </div>
-        <div class="grid-x grid-padding-x">
-          <div class="large-8 medium-8 cell">
-        
-            <h5>Por favor ingresar su credenciales para acceder la consulta de comprobantes:</h5>
-            <form role="form" name="login" action="php/login.php" method="post">
-              <div class="grid-x grid-padding-x">
-                <div class="large-12 cell">
-                  <label>Usuario</label>
-                  <input type="text" class="form-control" id="username" name="username" placeholder="Digite su correo." />
+<body class="authentication-bg pb-0">
+
+    <div class="auth-fluid">
+        <!--Auth fluid left content -->
+        <div class="auth-fluid-form-box">
+            <div class="card-body d-flex flex-column h-100 gap-3">
+
+                <!-- Logo -->
+                <div class="auth-brand text-center text-lg-start">
+                    <a href="index.html" class="logo-dark">
+                        <span><img src="webroot/img/logo.png" alt="dark logo" height="22"></span>
+                    </a>
+                    <a href="index.html" class="logo-light">
+                        <span><img src="webroot/img/logo.png" alt="logo" height="22"></span>
+                    </a>
                 </div>
-              </div>
 
-              <div class="grid-x grid-padding-x">
-                <div class="large-12 cell">
-                  <label>Credencial</label>
-                  <input type="password" class="form-control" id="password" name="password" placeholder="Digite su contraseña" />
+                <div class="my-auto">
+                    <!-- title-->
+                    <h4 class="mt-0">Bienvenido:</h4>
+                    <p class="text-muted mb-4">Presentamos una solución de calidad, flexible y escalable para su negocio, independiente al sistema informatico que utiliza.</p>
+
+                    <p class="text-muted mb-4">Se trata de una propuesta creativa para consultar sus comprobantes electronicos, preservando la naturaleza,  disminuyendo el consumo de los recursos de su negocio.</p>
+                    <!-- form -->
+                    <form action="php/login.php" method = "post">
+                        <div class="mb-3">
+                            
+                            <input class="form-control" type="text" id="username" name="username" required="" placeholder="Usuario y/o Correo">
+                        </div>
+                        <div class="mb-3">
+                           
+                           
+                            <input class="form-control" type="password" required="" id="password" name="password" placeholder="Clave">
+                        </div>
+                        
+                        <div class="d-grid mb-0 text-center">
+                            <button class="btn btn-primary" type="submit"> Ingresar </button>
+                        </div>
+                        <!-- social-->
+                       
+                    </form>
+                    <!-- end form-->
                 </div>
-              </div>
 
-              <p><button type="submit" class="button">Ingresar</button><br/>
+                <!-- Footer-->
+                <footer class="footer footer-alt">
+                    <p class="text-muted">Aun no tienes Usuario? <a href="pages-register-2.html" class="text-muted ms-1"><b>Registrate</b></a></p>
+                </footer>
 
-            </form>
-          </div>
-
-          <div class="large-4 medium-4 cell">
-            <div class="grid-x grid-padding-x">
-              <div class="primary callout">
-                <h5><b>Comunicamos:</b></h5>
-                <p>Se trata de una propuesta creativa para consultar sus comprobantes electronicos, preservando la naturaleza,  disminuyendo el consumo de los recursos de su negocio.</p>
-                <p>Presentamos una solución de calidad, flexible y escalable para su negocio, independiente al sistema informatico que utiliza.</p>
-                <li>Información disponible 24 horas/ 7 días a la semana.</li>
-              </div>
-            </div>
-          </div>
-
+            </div> <!-- end .card-body -->
         </div>
-      </div>
+        <!-- end auth-fluid-form-box-->
 
-      </div>
-
-      <footer class="row">
-        <div class="large-12 columns">
-          <hr>
-          <div class="row">
-            <div class="large-6 columns">
-              <p>© Copyright Luna developed with <3</p>
-            </div>
-            <div class="large-6 columns">
-            <ul class="inline-list right">
-
-            </ul>
-            </div>
-          </div>
+        <!-- Auth fluid right content -->
+        <div class="auth-fluid-right text-center">
+            <div class="auth-user-testimonial">
+                <h2 class="mb-3">Laboratorio B & T.</h2>
+                <p class="lead">Información disponible 24 horas/ 7 días a la semana. 
+                </p>
+                <p>
+                    
+                </p>
+            </div> <!-- end auth-user-testimonial-->
         </div>
-      </footer>
+        <!-- end Auth fluid right content -->
+    </div>
+    <!-- end auth-fluid-->
+    <!-- Vendor js -->
+    <script src="vendor.min.js"></script>
 
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
-    
-  </body>
+    <!-- App js -->
+    <script src="assets/js/app.min.js"></script>
+
+</body>
+
 </html>

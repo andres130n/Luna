@@ -12,7 +12,7 @@
 					break;
 				}
 				if($user_id==null){
-					print "<script>alert(\"Acceso invalido.\");window.location='../index.php';</script>";
+					print "<script>alert(\"Acceso invalido.\");window.location='../';</script>";
 				}else{
 					session_start();
 					$_SESSION["user_id"]=$user_id;
