@@ -30,10 +30,10 @@
 
                 <!-- Logo -->
                 <div class="auth-brand text-center text-lg-start">
-                    <a href="index.html" class="logo-dark">
+                    <a href="#" class="logo-dark">
                         <span><img src="webroot/img/logo.png" alt="dark logo" height="22"></span>
                     </a>
-                    <a href="index.html" class="logo-light">
+                    <a href="#" class="logo-light">
                         <span><img src="webroot/img/logo.png" alt="logo" height="22"></span>
                     </a>
                 </div>
