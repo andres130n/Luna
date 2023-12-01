@@ -94,15 +94,10 @@
                           $query = $con->query($sql);
 
                               while ($row=$query->fetch_array()) {
-              
-                                $informe =  " 
-                                  <td>".$row[2]."</td>
-                                  <td>".$row[3]."</td>
-                                  <td>".$row[4]."</td>   
-                                  </tr>"; 
+                                $validaDatos = true;                                
                               }
 
-                              if ($informe != null){
+                              if ($validaDatos){
                                 ?>
                                   <table class='table table-hover' id='dev-table'>
                                     <tr>  
@@ -117,11 +112,9 @@
                                   while ($row=$query->fetch_array()) {
                                     echo "<tr>";
                                        echo "<td>      
-                                       <form role='form' name='consulta' action='seleccionPersona.php' method='post'>
-                                          <div class='row collapse'>
-                                              <input type='text' style='display: none;' id='identificacion' name='identificacion' value='".$row[0]."' />
-                                              <button type='submit' class='button'>Seleccionar</button>
-                                          </div>
+                                       <form action='seleccionPersona.php' method='post'>
+                                          <input type='text' style='display: none;' id='identificacion' name='identificacion' value='".$row[0]."' />
+                                          <button type='submit' class='btn btn-link'> <i class='fa-solid fa-magnifying-glass'></i></button>                            
                                        </form>
                                        </td>";     
                                       echo "<td>".$row[2]."</td>";
